@@ -1,0 +1,6 @@
+570. Managers with at Least 5 Direct Reports
+
+https://leetcode.com/problems/managers-with-at-least-5-direct-reports/description/?envType=study-plan-v2&envId=top-sql-50
+
+SELECT Emp.name FROM Employee AS Emp INNER JOIN Employee AS Employ
+ON Employ.managerID = Emp.id GROUP BY Emp.name, Emp.id HAVING COUNT(Employ.id) >= 5;
